@@ -1,0 +1,32 @@
+<body id="root-background">
+  <%= render partial: "layouts/navbar" %>
+
+  <% if current_user %>
+    <div class="container">
+      <div class="andra-intro col-md-8 col-md-offset-3">
+        <h1> Welcome back <%= current_user.first_name %></h1>
+        <h3> Select an option below!</h3>
+        <%= button_to "Run An Experiment", experiment_path, method: :get, class: "btn btn-danger btn-create" %>
+        <%= button_to "See The Data", data_path, method: :get, class: "btn btn-danger btn-create" %>
+      </div>
+    </div>
+    <div class="andra-landing-page">
+      <%= image_tag "/assets/standard_smiley.png", class:"standard-andra"%>
+    </div>
+  <% else %>
+    <div class="container">
+      <div class="andra-intro col-md-8 col-md-offset-3">
+        <h1> <strong>Hi</strong> my name is <strong> Andra </strong> </h1>
+        <h3> I use machine learning to analyze your emotions <br> and help you work happier </h3>
+        <%= button_to "Create An Account", signup_path, method: :get, class: "btn btn-danger btn-create" %>
+      </div>
+    </div>
+    <div class="andra-landing-page">
+      <%= image_tag "/assets/standard_smiley.png", class:"standard-andra"%>
+    </div>
+  <% end %>
+
+</body>
+
+<!-- if logged in buttons: "Start A new Expeeriement" -->
+<!-- if logged in buttons: "get results from the data" -->

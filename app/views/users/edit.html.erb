@@ -1,0 +1,31 @@
+<%= render partial: "layouts/navbar" %>
+
+<div class="container">
+<div class= 'form-group text-center'>
+  <h3 class="a-heading">Edit your account information below</h3>
+<%= form_for @user do |f| %>
+<div class='row'>
+      <div class='form-group'>
+        <%= f.text_field :first_name, placeholder: "First Name" %>
+      </div>
+          </div>
+  <div class='row'>
+      <div class='form-group'>
+        <%= f.text_field :email, placeholder: "Email" %>
+      </div>
+          </div>
+  <div class='row'>
+      <div class='form-group'>
+  <%= f.password_field :password, placeholder: "Password" %>
+  </div>
+      </div>
+  <div class='row'>
+      <div class='form-group'>
+  <%= f.password_field :password_confirmation, placeholder: "Confirm password" %>
+</div>
+  </div>
+  <button type="submit" class="btn btn-danger">Update Profile</button>
+  <%= link_to "Cancel", user_path(current_user), class: "btn btn-default" %>
+</div>
+</div>
+<% end %>

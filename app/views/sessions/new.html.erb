@@ -1,0 +1,21 @@
+<%= render partial: "layouts/navbar_no_login" %>
+
+<h1>Enter Information To Login</h1>
+<div class="container">
+<div class= 'form-group text-center'>
+  <h3 class="a-heading">Create your account below</h3>
+<%= form_tag login_path, method: :post, class: "form-group" do %>
+  <div class='row'>
+      <div class='form-group'>
+        <%= text_field_tag :email, params[:email], placeholder: "Email" %>
+      </div>
+          </div>
+  <div class='row'>
+      <div class='form-group'>
+  <%= password_field_tag :password, nil, placeholder: "Password" %>
+  </div>
+      </div>
+  <button type="submit" class="btn btn-danger">Login</button>
+<% end %>
+</div>
+</div>

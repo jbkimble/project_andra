@@ -1,0 +1,26 @@
+<%= render partial: "layouts/navbar" %>
+
+<!-- <h3>Click the Button to take a photo and I will guess how you are feeling!</h3> -->
+<div class="container text-center">
+  <h2>It's nice to meet you <%= current_user.first_name %> </h2>
+  <h3>I wonder how you are feeling ...</h3><br>
+  <h4>Let me snap a photo and find out</h4>
+  <h5>Make a face expressing how you are feeling. Then click the button to take a photo!</h5>
+  <%= form_for(@image) do |f| %>
+    <div id="my_camera"></div>
+
+    <!-- <input type=button value="Take Snapshot" onClick="take_snapshot()"> -->
+
+    <div class="field">
+      <%= f.hidden_field :image %>
+      <!-- <div id="results">Your captured image will appear here...</div> -->
+    </div>
+
+    <button value="Take Snapshot" onClick="take_snapshot()" type="submit" class="btn btn-danger login-items">Take Photo</button></p>
+  <% end %>
+</div>
+
+
+<div class="andra-landing-page">
+  <%= image_tag "/assets/emoji_with_camera.png", class:"standard-andra"%>
+</div>

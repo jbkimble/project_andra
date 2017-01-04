@@ -1,0 +1,70 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.a-heading {
+  font-family: "Verdana", Geneva, sans-serif;
+  color: purple;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+}
+
+.andra-intro {
+  margin-top: 200px;
+  margin-left: 160px;
+}
+
+.btn-create {
+  margin-top: 30px;
+  margin-left: 200px;
+}
+
+.andra-logo {
+  font-family: "Verdana", Geneva, sans-serif;
+  color: #c6a9e0;
+  font-size: 2.2em;
+}
+
+a.andra-logo:hover {
+    text-decoration:none;
+    color: #c495ec;
+}
+
+.nav-login {
+  font-size:1em;
+  color: #cda3f2;
+}
+
+a.nav-login:hover {
+    text-decoration:none;
+    color: #c495ec;
+}
+
+.andra-landing-page {
+    position:fixed;
+    right:40px;
+    bottom: 40px;
+}
+
+.standard-andra {
+  height: 340px;
+}
+
+#root-background {
+  background-color: #c6a9e0;
+}
+
+.single-center {
+  margin-top: 200px;
+}
