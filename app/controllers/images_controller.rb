@@ -25,26 +25,6 @@ class ImagesController < ApplicationController
     end
   end
 
-  def update
-    respond_to do |format|
-      if @image.update(image_params)
-        format.html { redirect_to @image, notice: ' image was successfully updated.' }
-        format.json { render :show, status: :ok, location: @image }
-      else
-        format.html { render :edit }
-        format.json { render json: @image.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  def destroy
-    @image.destroy
-    respond_to do |format|
-      format.html { redirect_to images_url, notice: ' image was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
-
   private
     def set_image
       @image = Image.find(params[:id])
