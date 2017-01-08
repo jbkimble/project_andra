@@ -5,4 +5,5 @@ class User < ApplicationRecord
   validates_confirmation_of :password
 
   has_many :images
+  has_many :experiments
 end

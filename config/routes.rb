@@ -12,7 +12,11 @@ Rails.application.routes.draw do
   get '/emotion' => 'emotions#show', as:'emotion'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
-  get '/experiment' => 'experiments#index'
+
+  resources :experiments do
+    resources :runs
+  end
+  # get '/experiment' => 'experiments#index'
   get '/data' => 'data#index'
   # resources :users, only: [:create, :new]
 end

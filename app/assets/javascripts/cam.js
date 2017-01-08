@@ -23,3 +23,15 @@ $(document).ready(function() {
         Webcam.attach('#my_camera');
     }
 });
+
+function take_timed_snapshot(){
+    Webcam.snap(function(data_uri) {
+        id = $('[id*="_image"]');
+
+        if (id.length) {
+            id.val(data_uri);
+        }
+
+        document.getElementById('results').innerHTML = '<img src="' + data_uri + '"/>';
+    });
+}
