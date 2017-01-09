@@ -1,0 +1,35 @@
+<%= render partial: "layouts/navbar" %>
+
+Title: <%= @experiment.title %> <br>
+Hypothesis: <%= @experiment.hypothesis %> <br>
+Description: <%= @experiment.description %> <br>
+Duration: 5 minutes <br> <br>
+
+
+<h3>Click the button below to start your experiment</h3>
+<h4>Your browser window must remain open for the duration of the experiment</h4>
+
+<button value="Start Experiment" onClick="take_photos()" class="btn btn-danger login-items" data-remote="true" id="start-experiment-button">Start Experiment</button>
+
+<div class="hidden-camera">
+  <%= form_for(@image, remote: true) do |f| %>
+  <div id="my_camera"></div>
+
+  <!-- <input type=button value="Start Experiment" onClick="take_snap()"> -->
+
+  <div class="field">
+    <%= f.hidden_field :image %>
+    <!-- <%= f.label :image %>: <br />
+    <div id="results">Your captured image will appear here...</div>
+    <div class="submit"></div> -->
+    <!-- <button value="Take Snapshot" onClick="photoTimer()" type="submit" class="btn btn-danger login-items">Start Experiment</button></p> -->
+    <button value="Take Snapshot" onClick="take_snapshot()" type="submit" class="btn btn-danger login-items" id="take-photo-button">Take Photo</button></p>
+  </div>
+</div>
+  ...
+  <!-- Other fields and submit button -->
+<% end %>
+
+<!-- <button onclick="clearInterval(photoTimer)">End Experiment</button> -->
+
+<%= link_to "View Results When Done", experiment_path(@experiment) %>

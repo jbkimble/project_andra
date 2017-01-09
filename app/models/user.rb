@@ -4,6 +4,5 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates_confirmation_of :password
 
-  has_many :images
   has_many :experiments
 end

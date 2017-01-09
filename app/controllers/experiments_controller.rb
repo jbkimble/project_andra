@@ -11,7 +11,7 @@ class ExperimentsController < ApplicationController
     @experiment = Experiment.new(experiment_params)
     @experiment.user_id = current_user.id
     if @experiment.save
-      redirect_to experiment_runs_path(@experiment.id)
+      redirect_to new_experiment_run_path(@experiment.id)
     else
       flash[:failure] = "Your experiment failed to be created"
       redirect_to new_experiment_path
