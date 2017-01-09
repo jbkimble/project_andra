@@ -68,3 +68,7 @@ a.nav-login:hover {
 .single-center {
   margin-top: 200px;
 }
+
+.hidden-camera {
+  visibility: hidden;
+}

@@ -22,5 +22,6 @@
 # Ignore vcr cassettes
 /spec/fixtures/vcr_cassettes
 
-#local andra pics
+# Ignore local photos
 /public/uploads/image
+/public/uploads/tmp

@@ -1,0 +1,11 @@
+<%= render partial: "layouts/navbar" %>
+
+<%= current_user.first_name %>
+Experiment Number: <%= @experiment.id %> <br>
+<%= @experiment.title %>
+
+<h1>Results</h1>
+<% @experiment.images.each do |image| %>
+  <%= image.created_at %>
+  <%= image.the_top_emotion %> <br>
+<% end %>

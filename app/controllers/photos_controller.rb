@@ -4,6 +4,7 @@ class PhotosController < ApplicationController
   end
 
   def create
+    byebug
     @image = Image.new(image_params)
   end
 

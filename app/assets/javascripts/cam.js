@@ -23,3 +23,36 @@ $(document).ready(function() {
         Webcam.attach('#my_camera');
     }
 });
+
+var callCount = 1;
+function take_photos(){
+    setInterval(function () {
+    if (callCount < 4) {
+      document.getElementById("take-photo-button").click();
+      callCount += 1;
+    } else {
+      clearInterval(photoTimer);
+    }
+  }, 3000);
+
+}
+// var photoTimer = function() {
+//   for (i = 0; i < 4; i++) {
+//     setTimeout(take_snapshot(), 5000);
+//   };
+//     // display div with text saying experiment is over
+//     // remove div with text explaining how experiement is run
+// };
+
+// photoTimer();
+// var callCount = 1;
+// function photoTimer() {
+//   setInterval(function () {
+//   if (callCount < 4) {
+//     take_snapshot();
+//     callCount += 1;
+//   } else {
+//     clearInterval(photoTimer);
+//   }
+// }, 3000);
+// }

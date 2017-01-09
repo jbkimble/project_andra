@@ -1,0 +1,34 @@
+<%= render partial: "layouts/navbar" %>
+
+<div class="container">
+<div class= 'form-group text-center'>
+  <h3 class="a-heading">Enter Info For Experiment Below</h3>
+<%= form_for @experiment do |f| %>
+<div class='row'>
+      <div class='form-group'>
+        <%= f.text_field :title, placeholder: "Title" %>
+      </div>
+          </div>
+  <div class='row'>
+      <div class='form-group'>
+        <%= f.text_field :hypothesis, placeholder: "Hypothesis" %>
+      </div>
+          </div>
+        </div>
+        <div class='row'>
+    <div class='form-group'>
+      <%= f.text_field :description, placeholder: "Description" %>
+    </div>
+        </div>
+        <div class='row'>
+    <div class='form-group'>
+      Minutes: <%= f.select :minutes, [25]%>
+    </div>
+        </div>
+  <button type="submit" class="btn btn-danger">Create Experiment</button>
+</div>
+</div>
+<% end %>
+
+
+"5 minute experiment"

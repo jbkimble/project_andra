@@ -6,7 +6,7 @@
       <div class="andra-intro col-md-8 col-md-offset-3">
         <h1> Welcome back <%= current_user.first_name %></h1>
         <h3> Select an option below!</h3>
-        <%= button_to "Run An Experiment", experiment_path, method: :get, class: "btn btn-danger btn-create" %>
+        <%= button_to "Run An Experiment", experiments_path, method: :get, class: "btn btn-danger btn-create" %>
         <%= button_to "See The Data", data_path, method: :get, class: "btn btn-danger btn-create" %>
       </div>
     </div>
