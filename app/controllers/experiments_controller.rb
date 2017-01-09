@@ -25,6 +25,6 @@ class ExperimentsController < ApplicationController
   private
 
     def experiment_params
-      params.require(:experiment).permit(:id, :title, :hypothesis, :description)
+      params.require(:experiment).permit(:id, :title, :hypothesis, :description, :minutes)
     end
 end

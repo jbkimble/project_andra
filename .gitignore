@@ -24,3 +24,4 @@
 
 # Ignore local photos
 /public/uploads/image
+/public/uploads/tmp
