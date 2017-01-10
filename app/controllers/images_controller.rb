@@ -31,9 +31,9 @@ class ImagesController < ApplicationController
     if @image.save
       flash[:success] = "Great photo!"
 
-      respond_to do |format|
-        format.js
-      end
+      # respond_to do |format|
+      #   format.js
+      # end
       # redirect_to new_experiment_run_path(experiment.id)
       # redirect_to experiment_run_path(@image.experiment)
     else
