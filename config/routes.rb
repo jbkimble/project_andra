@@ -1,22 +1,28 @@
 Rails.application.routes.draw do
-  resources :images
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root :to => 'home#show'
-  get 'signup', to: 'users#new'
-  resources :users, only: [:show, :edit, :create, :update, :destroy]
-  # post '/users' => 'users#create'
-  # get '/users/:id/edit' => 'users#edit'
 
-  get '/takephoto' => 'photos#new', as: 'take_photo'
-  get '/logout' => 'sessions#destroy'
-  get '/emotion' => 'emotions#show', as:'emotion'
+  get 'signup', to: 'users#new'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
 
-  resources :experiments do
-    resources :runs
+
+  resources :users, only: [:show, :edit, :create, :update, :destroy]
+
+  resources :images
+
+  resources :experiments, only: [:new, :create, :index, :show] do
+    resources :runs, only: [:new]
   end
+
+
+
+
+  # post '/users' => 'users#create'
+  # get '/users/:id/edit' => 'users#edit'
+  # get '/takephoto' => 'photos#new', as: 'take_photo'
+  # get '/emotion' => 'emotions#show', as:'emotion'
   # get '/experiment' => 'experiments#index'
-  get '/data' => 'data#index'
+  # get '/data' => 'data#index'
   # resources :users, only: [:create, :new]
 end
