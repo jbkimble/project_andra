@@ -26,6 +26,8 @@ class ImagesController < ApplicationController
     @image.neutral = image_emotions[:neutral]
     @image.sadness = image_emotions[:sadness]
     @image.surprise = image_emotions[:surprise]
+    @image.top_emotion = EmotionData.chart_top_emotion(image_emotions)
+    @image.chart_value = EmotionData.chart_data(image_emotions).to_s
     if @image.save
       flash[:success] = "Great photo!"
 
