@@ -12,8 +12,7 @@ class UsersController < ApplicationController
     if @user.save
       # flash[:success] = "Welcome #{@user.first_name} your account was successfully created!"
       session[:user_id] = @user.id
-      redirect_to root_path
-      # redirect_to take_photo_path
+      redirect_to experiments_path
     else
       flash[:failure] = "Your account creation failed, please try again."
       render :new
