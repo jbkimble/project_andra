@@ -20,6 +20,8 @@ class ExperimentsController < ApplicationController
 
   def show
     @experiment = Experiment.find(params[:id])
+
+    @line_data = Image.line_data(@experiment.images)
   end
 
   private

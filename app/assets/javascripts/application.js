@@ -14,4 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require webcam.min
+//= require raphael.min
+//= require morris
 //= require_tree .

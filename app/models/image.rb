@@ -13,4 +13,13 @@ class Image < ApplicationRecord
     result = image_as_hash.max_by{|k,v| v.to_f}
     result[0]
   end
+
+  def self.line_data(images)
+    result = images.map do |image|
+      # { time: image.created_at.strftime("%c"), value: image.chart_value }
+      { "time" => image.created_at.strftime("%Y-%m-%d %H:%M:%S"), "value" => image.chart_value }
+    end
+  end
 end
+
+# image.created_at.strftime("%I:%M:%S").sub(/^[0]*/,"")

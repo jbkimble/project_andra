@@ -1,11 +1,37 @@
 <%= render partial: "layouts/navbar" %>
 
-<%= current_user.first_name %>
 Experiment Number: <%= @experiment.id %> <br>
-<%= @experiment.title %>
+Title: <%= @experiment.title %> <br>
+Description: <%= @experiment.description %> <br><br>
 
-<h1>Results</h1>
+<div id="experimentchart" style="height: 250px;"></div>
+<br>
+<br>
+
+Hypothesis: <%= @experiment.hypothesis %> <br>
+
+<h3>Log</h3>
 <% @experiment.images.each do |image| %>
   <%= image.created_at %>
-  <%= image.the_top_emotion %> <br>
+  <%= image.top_emotion %>
+  <%= image.chart_value %> <br>
 <% end %>
+
+<script>
+
+  new Morris.Area({
+    // ID of the element in which to draw the chart.
+    element: 'experimentchart',
+    // Chart data records -- each entry in this array corresponds to a point on
+    // the chart.
+    data: <%= @line_data.to_json.html_safe %>,
+    // The name of the data record attribute that contains x-values.
+    xkey: 'time',
+    // A list of names of data record attributes that contain y-values.
+    ykeys: ['value'],
+    // Labels for the ykeys -- will be displayed when you hover over the
+    // chart.
+    labels: ['Emotion Index']
+  });
+
+</script>
