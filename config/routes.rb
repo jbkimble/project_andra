@@ -1,12 +1,10 @@
 Rails.application.routes.draw do
   root :to => 'home#show'
 
-  get 'auth/:provider/callback', to: 'omni#create'
   get 'signup', to: 'users#new'
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
-
 
   resources :users, only: [:show, :edit, :create, :update, :destroy]
 
