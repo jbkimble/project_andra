@@ -34,16 +34,19 @@ Duration: <%= @experiment.minutes %> minutes <br> <br>
 <%= link_to "View Results When Done", experiment_path(@experiment) %>
 
 <script>
+  var photosNum = <%= @experiment.minutes.to_i * @experiment.photo_frequency.to_i %>;
+  var photoFrequency = <%= 60000/@experiment.photo_frequency.to_i %>;
+  var experimentsShowRoute = "/experiments/" + <%= @experiment.id.to_s %>;
   var callCount = 0;
   function take_photos(){
       setInterval(function () {
-      if (callCount < <%= @experiment.minutes.to_i * @experiment.photo_frequency.to_i %>) {
+      if (callCount < photosNum) {
         document.getElementById("take-photo-button").click();
         callCount += 1;
       } else {
-        clearInterval(photoTimer);
+        window.location.href=experimentsShowRoute
+        // clearInterval(photoTimer);
       }
-    }, <%= 60000/@experiment.photo_frequency.to_i %>);
-
+    },photoFrequency);
   }
 </script>
