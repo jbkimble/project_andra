@@ -29,7 +29,7 @@ class ImagesController < ApplicationController
     @image.top_emotion = EmotionData.chart_top_emotion(image_emotions)
     @image.chart_value = EmotionData.chart_data(image_emotions).to_s
     if @image.save
-      # flash[:success] = "Great photo!"
+      # flash[:success] = "Great photos!"
     else
       flash[:failure] = "Something went wrong, please try again."
       redirect_to root_path
