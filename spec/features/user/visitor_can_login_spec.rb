@@ -17,7 +17,7 @@ describe 'As a visitor' do
       # expect(page).to have_content('Welcome James your account was successfully created!')
       expect(page).to have_link('Logout')
       expect(page).to_not have_link('Login')
-      expect(current_path).to eq(root_path)
+      expect(current_path).to eq(experiments_path)
     end
   end
 

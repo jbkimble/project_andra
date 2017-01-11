@@ -14,13 +14,13 @@ describe 'As a user with an account' do
 
       click_on "Login"
 
-      expect(current_path).to eq(root_path)
-      expect(page).to have_content("Welcome back #{user.first_name}")
-      expect(page).to have_button("Run An Experiment")
-      # expect(page).to have_content("Smart Data Analysis")
-      expect(page).to have_button("See The Data")
-      expect(page).to_not have_content("Login")
-      expect(page).to_not have_button("Create Account")
+      expect(current_path).to eq(experiments_path)
+      # expect(page).to have_content("Welcome back #{user.first_name}")
+      expect(page).to have_button("New Experiment")
+      # # expect(page).to have_content("Smart Data Analysis")
+      # expect(page).to have_button("See The Data")
+      # expect(page).to_not have_content("Login")
+      # expect(page).to_not have_button("Create Account")
     end
   end
 
