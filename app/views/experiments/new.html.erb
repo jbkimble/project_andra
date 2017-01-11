@@ -22,7 +22,12 @@
         </div>
         <div class='row'>
     <div class='form-group'>
-      Minutes: <%= f.select :minutes, [25]%>
+      Experiment Length In Minutes: <%= f.select :minutes, [1,5,25,50]%>
+    </div>
+        </div>
+        <div class='row'>
+    <div class='form-group'>
+      Photos Per Minute: <%= f.select :photo_frequency, [1,5,10,20]%>
     </div>
         </div>
   <button type="submit" class="btn btn-danger">Create Experiment</button>
