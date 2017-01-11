@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'omniauth-google-oauth2'
 gem 'figaro' #hide stuff
 gem 'serializer' #api serializers
 gem 'faraday' #for http requests
