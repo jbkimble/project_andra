@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'A visitor logs in' do
-  scenario 'using google oauth' do
+  xscenario 'using google oauth' do
     stub_omniauth
     visit root_path
 
