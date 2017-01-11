@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170110044318) do
+ActiveRecord::Schema.define(version: 20170111164530) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,8 +21,9 @@ ActiveRecord::Schema.define(version: 20170110044318) do
     t.string   "hypothesis"
     t.string   "description"
     t.string   "minutes"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "photo_frequency"
     t.index ["user_id"], name: "index_experiments_on_user_id", using: :btree
   end
 
