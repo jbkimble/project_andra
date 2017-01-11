@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :image do
-    user
     image "MyString"
+    experiment
   end
 end
