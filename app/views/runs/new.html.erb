@@ -32,3 +32,18 @@ Duration: <%= @experiment.minutes %> minutes <br> <br>
 <!-- <button onclick="clearInterval(photoTimer)">End Experiment</button> -->
 
 <%= link_to "View Results When Done", experiment_path(@experiment) %>
+
+<script>
+  var callCount = 0;
+  function take_photos(){
+      setInterval(function () {
+      if (callCount < <%= @experiment.minutes.to_i * @experiment.photo_frequency.to_i %>) {
+        document.getElementById("take-photo-button").click();
+        callCount += 1;
+      } else {
+        clearInterval(photoTimer);
+      }
+    }, <%= 60000/@experiment.photo_frequency.to_i %>);
+
+  }
+</script>
