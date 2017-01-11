@@ -13,6 +13,20 @@
  *= require_tree .
  *= require_self
  */
+ .btn-mine{
+   background-color: purple;
+   border-color: purple;
+   height: 60px;
+   width: 180px;
+ }
+
+ .btn-mine:hover {
+   background-color: #FFDD67;
+   border-color: #FFDD67;
+   height: 60px;
+   width: 180px;
+ }
+
 .a-heading {
   font-family: "Verdana", Geneva, sans-serif;
   color: purple;
@@ -21,6 +35,7 @@
 }
 
 .andra-intro {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   margin-top: 200px;
   margin-left: 160px;
 }
@@ -32,7 +47,7 @@
 
 .andra-logo {
   font-family: "Verdana", Geneva, sans-serif;
-  color: #c6a9e0;
+  color: purple;
   font-size: 2.2em;
 }
 
@@ -42,8 +57,8 @@ a.andra-logo:hover {
 }
 
 .nav-login {
-  font-size:1em;
-  color: #cda3f2;
+  font-size:1.3em;
+  color: #c6a9e0 !important;
 }
 
 a.nav-login:hover {
