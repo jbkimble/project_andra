@@ -1,9 +1,78 @@
 <%= render partial: "layouts/navbar" %>
+<div class="container">
 
-<h2>Explination of Experiments</h2>
+  <!-- <h2 class="andra-header-plain">Explination of Experiments</h2> -->
+  <!-- <h2 class="andra-header-plain">New Experiment</h2> -->
+  <h4 class="andra-header-plain ten-top">Find out how to be happier at work with Andra... </h4>
+  <hr class="ten-top andra-line">
 
-<h2>New Experiment</h2>
+  <div class="row twenty-top">
+    <div class="col s7 push-s1">
+      <span class="">
+        <div class="bubble-side">
+          <div class="center-text">
+            <h4 class="five-top">Start your first experiment below!</h4>
+          </div>
+        </div>
+      </span>
+    </div>
 
-  <%= button_to "New Experiment", new_experiment_path, method: :get, class: "btn btn-danger btn-create" %>
+    <div class="col s5 push-s1">
+      <span class="">
+        <%= image_tag "/assets/standard_smiley.png", class:"standard-andra"%>
+      </span>
+    </div>
+  </div>
 
-<h2>Your Experiments</h2>
+  <div class="center up-ten">
+    <%= button_to "New Experiment", new_experiment_path, method: :get, class: "btn btn-danger btn-create" %>
+  </div>
+
+  <hr class="twenty-top andra-line">
+
+  <!-- <h3 class="andra-header-plain">Run an experiment with Andra ... </h3> -->
+  <!-- <div class="row">
+    <div class="col s8">
+
+    <div class="bubble-side">
+      <div class="center-text">
+        <h4 class="five-top">I also like to change my identity on occassion!</h4> -->
+        <!-- <h4 class="five-top">Quick change your identity, before they catch you!</h4> -->
+      <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div class="col s2"> -->
+      <%#= image_tag "/assets/standard_smiley.png", class:"standard-andra"%>
+    <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
+
+    <div class="row">
+    <div class="col s4">
+      <h2 class="center">
+        <i class="material-icons large icon-experiment">new_releases</i>
+      </h2>
+      <h4 class="andra-header-small">Hypothesize</h4>
+      <p>Predict what will make you happier while you work and start and experiment to track it</p>
+    </div>
+    <div class="col s4">
+      <h2 class="center">
+        <i class="material-icons large icon-experiment">av_timer</i>
+      </h2>
+      <h4 class="andra-header-small">Run Experiments</h4>
+      <p>Just click 'Go!'' and let Andra monitor your emotions for you. She'll note times when you're feeling happy and times when you aren't feeling so great</p>
+    </div>
+    <div class="col s4">
+      <h2 class="center">
+        <i class="material-icons large icon-experiment">trending_up</i>
+      </h2>
+      <h4 class="andra-header-small">Get Data</h4>
+      <p>Finally sit back and let us analyze the data for you, use the power of machine learning to find opportunities to be happier at work!</p>
+    </div>
+
+    </div>
+
+
+
+
+  <h2 class="andra-header-plain">Your Experiments</h2>
+</div>
