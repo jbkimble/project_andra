@@ -11,9 +11,14 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
 //= require webcam.min
 //= require raphael.min
 //= require morris
 //= require_tree .
+
+$(document).ready(function() {
+  $('select').material_select();
+});
