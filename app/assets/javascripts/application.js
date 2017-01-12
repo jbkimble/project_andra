@@ -19,6 +19,6 @@
 //= require morris
 //= require_tree .
 
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
   $('select').material_select();
 });

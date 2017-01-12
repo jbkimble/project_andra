@@ -1,5 +1,11 @@
 <%= render partial: "layouts/navbar" %>
 
+<script>
+  $(document).ready('turbolinks:load', function() {
+    $('select').material_select();
+  });
+</script>
+
 <div class="container">
   <h3 class="andra-header twenty-top">Log Experiment Info Below</h3>
 
@@ -7,10 +13,10 @@
       <%= f.text_field :title, placeholder: "Title" %>
       <%= f.text_field :hypothesis, placeholder: "Hypothesis" %>
       <%= f.text_field :description, placeholder: "Description" %>
-      Experiment Length In Minutes:
-        <%= f.select :minutes, [1,5,25,50], class: "browser-default" %>
-      Photos Per Minute:
-        <%= f.select :photo_frequency, [1,5,10,20]%>
+      <p class="dropdown-tag">Length In Minutes: </p>
+        <%= f.select :minutes, [1,5,25,50], {}, {:label => "Materialize Select", :class => 'input-field browser-default' }%>
+      <p class="dropdown-tag">Photos Per Minute:</p>
+        <%= f.select :photo_frequency, [1,5,10,20], {}, {:label => "Materialize Select", :class => 'input-field browser-default' }%>
 
       <button type="submit" class="btn btn-danger">Create Experiment</button>
 <% end %>

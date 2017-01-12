@@ -80,7 +80,8 @@
 
 .andra-logo {
   font-family: "Verdana", Geneva, sans-serif;
-  color: #009688;
+  /*color: #009688;*/
+  color: white;
   font-size: 2.2em;
   margin-left: 30px;
 }
@@ -269,4 +270,13 @@ left: 636px;
 
 .log-image {
   height: 70px;
+}
+
+.input-field {
+  width: 25%;
+  margin-bottom: 20px;
+}
+
+.dropdown-tag {
+  color: #d1d1d1;
 }
