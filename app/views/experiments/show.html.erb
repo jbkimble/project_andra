@@ -1,21 +1,63 @@
 <%= render partial: "layouts/navbar" %>
 
-Experiment Number: <%= @experiment.id %> <br>
-Title: <%= @experiment.title %> <br>
-Description: <%= @experiment.description %> <br><br>
+<div class="container ten-top">
+  <h3 class="andra-header-small"> Experiment: <%= @experiment.title %>  </h3>
 
-<div id="experimentchart" style="height: 250px;"></div>
-<br>
-<br>
+  <h5 class="andra-header-small"> Description: <%= @experiment.description %> </h5>
+  <h5 class="andra-header-small"> Hypothesis: <%= @experiment.hypothesis %>  </h5>
+  <hr class="andra-line">
 
-Hypothesis: <%= @experiment.hypothesis %> <br>
+  <div class="twenty-top" id="experimentchart" style="height: 250px;"></div>
 
-<h3>Log</h3>
-<% @experiment.images.each do |image| %>
-  <%= image.created_at %>
-  <%= image.top_emotion %>
-  <%= image.chart_value %> <br>
-<% end %>
+  <div class="row thirty-top">
+    <div class="col s7 pull-s1">
+      <span class="">
+        <div class="bubble-side">
+          <div class="center-text">
+            <h4 class="five-top">Your average emotion index was 87! <br>You seem really happy!</h4>
+          </div>
+        </div>
+      </span>
+    </div>
+
+    <div class="col s5 push-s1">
+      <span class="">
+        <%= image_tag "/assets/standard_smiley.png", class:"standard-andra"%>
+      </span>
+    </div>
+  </div>
+
+  <hr class="andra-line twenty-top">
+  <h3 class="andra-header-small">Emotion Log</h3>
+  <hr class="andra-line">
+
+  <div class="center">
+  <table class="centered highlight">
+     <thead>
+       <tr>
+           <th data-field="id">Time</th>
+           <th data-field="name">Image</th>
+           <th data-field="price">Emotion</th>
+           <th data-field="price">Emotion Index</th>
+       </tr>
+     </thead>
+
+     <tbody>
+
+    <% @experiment.images.each do |image| %>
+      <tr>
+        <td><%= image.created_at.strftime("%I:%M:%S %P") %> </td>
+        <td><%= image_tag image.image, class:"log-image" %> </td>
+        <td><%= image.top_emotion.capitalize %> </td>
+        <td><%= image.chart_value %> </td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+</div>
+
+</div>
 
 <script>
 
@@ -31,7 +73,11 @@ Hypothesis: <%= @experiment.hypothesis %> <br>
     ykeys: ['value'],
     // Labels for the ykeys -- will be displayed when you hover over the
     // chart.
-    labels: ['Emotion Index']
+    labels: ['Emotion Index'],
+
+    pointSize: '6px',
+
+    lineColors: ['#00bfa5']
   });
 
 </script>
