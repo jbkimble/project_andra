@@ -1,39 +1,34 @@
 <%= render partial: "layouts/navbar" %>
 
 <div class="container">
-<div class= 'form-group text-center'>
-  <h3 class="a-heading">Enter Info For Experiment Below</h3>
+  <h3 class="andra-header">Log Experiment Info Below</h3>
+
 <%= form_for @experiment do |f| %>
-<div class='row'>
-      <div class='form-group'>
-        <%= f.text_field :title, placeholder: "Title" %>
-      </div>
-          </div>
-  <div class='row'>
-      <div class='form-group'>
-        <%= f.text_field :hypothesis, placeholder: "Hypothesis" %>
-      </div>
-          </div>
-        </div>
-        <div class='row'>
-    <div class='form-group'>
+      <%= f.text_field :title, placeholder: "Title" %>
+      <%= f.text_field :hypothesis, placeholder: "Hypothesis" %>
       <%= f.text_field :description, placeholder: "Description" %>
-    </div>
-        </div>
-        <div class='row'>
-    <div class='form-group'>
-      Experiment Length In Minutes: <%= f.select :minutes, [1,5,25,50]%>
-    </div>
-        </div>
-        <div class='row'>
-    <div class='form-group'>
-      Photos Per Minute: <%= f.select :photo_frequency, [1,5,10,20]%>
-    </div>
-        </div>
-  <button type="submit" class="btn btn-danger">Create Experiment</button>
-</div>
-</div>
+      Experiment Length In Minutes:
+        <%= f.select :minutes, [1,5,25,50], class: "browser-default" %>
+      Photos Per Minute:
+        <%= f.select :photo_frequency, [1,5,10,20]%>
+
+      <button type="submit" class="btn btn-danger">Create Experiment</button>
 <% end %>
 
 
-"5 minute experiment"
+<div class="row thirty-top">
+  <div class="bubble">
+    <div class="center-text">
+      <!-- <h4>Welcome back. Don't leave for so long next time!</h4> -->
+      <h4>My artifcial intelligence detects greatness within you.</h4>
+      <!-- <h4>Follow my orders and you won't have any problems.</h4> -->
+    </div>    </div>
+</div>
+<div class="row">
+
+<div class="col s6 offset-s8">
+  <%= image_tag "/assets/standard_smiley.png", class:"standard-andra"%>
+</div>
+</div>
+
+</div>
