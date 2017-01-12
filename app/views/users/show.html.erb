@@ -1,3 +1,28 @@
-<h4> <%= current_user.first_name %> </h4>
-<h4> <%= current_user.email %> </h4>
-<%= link_to "Edit Profile Info", edit_user_path(current_user) %>
+<%= render partial: "layouts/navbar" %>
+
+<div class="container">
+
+  <h2 class="andra-header">User Profile</h2>
+  <i class="large material-icons">recent_actors</i>
+  <h4>First Name: <%= current_user.first_name %> </h4>
+  <h4>Email: <%= current_user.email %> </h4>
+  <h4>Password: ******** </h4>
+  <%= button_to "Edit Profile Info", edit_user_path(current_user), class: "btn", method: :get %>
+
+
+  <div class="bubble thirty-top">
+    <div class="center-text">
+      <!-- <h4>Welcome back. Don't leave for so long next time!</h4> -->
+      <!-- <h4>Oh' hey ... it's you.  I was um, just hanging out at your profile ... </h4> -->
+      <h4>I've noticed you've happier when you're with me, <br> we should hangout more.</h4>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+
+  <div class="col s6 offset-s8">
+  <%= image_tag "/assets/standard_smiley.png", class:"standard-andra"%>
+  </div>
+  </div>
+
+</div>
