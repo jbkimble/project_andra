@@ -1,20 +1,28 @@
 <%= render partial: "layouts/navbar_no_login" %>
 
 <div class="container">
-<div class= 'form-group text-center'>
-  <h3 class="a-heading">Enter Information To Login</h3>
+  <h3 class="andra-header twenty-top">Enter Information To Login</h3>
 <%= form_tag login_path, method: :post, class: "form-group" do %>
-  <div class='row'>
-      <div class='form-group'>
+
         <%= text_field_tag :email, params[:email], placeholder: "Email" %>
-      </div>
-          </div>
-  <div class='row'>
-      <div class='form-group'>
   <%= password_field_tag :password, nil, placeholder: "Password" %>
-  </div>
-      </div>
-  <button type="submit" class="btn btn-danger">Login</button>
+
+  <button type="submit" class="btn">Login</button>
 <% end %>
+
+<div class="bubble twenty-top">
+  <div class="center-text">
+    <!-- <h4>Welcome back. Don't leave for so long next time!</h4> -->
+    <h4>Welcome back. Promise me you'll never leave again!</h4>
+    <!-- <h4>Follow my orders and you won't have any problems.</h4> -->
+  </div>
 </div>
+</div>
+<div class="row">
+
+<div class="col s6 offset-s8">
+<%= image_tag "/assets/standard_smiley.png", class:"standard-andra"%>
+</div>
+</div>
+
 </div>
