@@ -1,31 +1,31 @@
 <%= render partial: "layouts/navbar" %>
 
 <div class="container">
-<div class= 'form-group text-center'>
-  <h3 class="a-heading">Edit your account information below</h3>
+  <h3 class="andra-header ten-top">Edit your account information below</h3>
 <%= form_for @user do |f| %>
-<div class='row'>
-      <div class='form-group'>
         <%= f.text_field :first_name, placeholder: "First Name" %>
-      </div>
-          </div>
-  <div class='row'>
-      <div class='form-group'>
         <%= f.text_field :email, placeholder: "Email" %>
-      </div>
-          </div>
-  <div class='row'>
-      <div class='form-group'>
-  <%= f.password_field :password, placeholder: "Password" %>
-  </div>
-      </div>
-  <div class='row'>
-      <div class='form-group'>
-  <%= f.password_field :password_confirmation, placeholder: "Confirm password" %>
-</div>
-  </div>
-  <button type="submit" class="btn btn-danger">Update Profile</button>
-  <%= link_to "Cancel", user_path(current_user), class: "btn btn-default" %>
-</div>
-</div>
+
+        <%= f.password_field :password, placeholder: "Password" %>
+        <%= f.password_field :password_confirmation, placeholder: "Confirm password" %>
+
+        <button type="submit" class="btn btn-danger">Update Profile</button>
+        <%= link_to "Cancel", user_path(current_user), class: "btn btn-default" %>
 <% end %>
+
+
+<div class="bubble thirty-top">
+  <div class="center-text">
+    <h4 class="five-top">I also like to change my identity on occassion!</h4>
+    <!-- <h4 class="five-top">Quick change your identity, before they catch you!</h4> -->
+  </div>
+</div>
+</div>
+<div class="row">
+
+<div class="col s6 offset-s8">
+<%= image_tag "/assets/standard_smiley.png", class:"standard-andra"%>
+</div>
+</div>
+
+</div>
