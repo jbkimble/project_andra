@@ -36,24 +36,58 @@
 
 .andra-intro {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
-  margin-top: 200px;
-  margin-left: 160px;
+  font-size: 4em;
+}
+.andra-intro-sub {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 2em;
 }
 
 .btn-create {
   margin-top: 30px;
-  margin-left: 200px;
+  margin-left: 120px;
+  height: 60px;
+  font-size: 1.4em;
+}
+
+.btn-experiment {
+  margin-top: 30px;
+  margin-left: 120px;
+  height: 60px;
+  width: 300px;
+  font-size: 1.4em;
+}
+
+.andra-header {
+  font-family: "Verdana", Geneva, sans-serif;
+  font-style: oblique;
+  color: #009688;
+}
+
+.andra-header-plain {
+  font-family: "Verdana", Geneva, sans-serif;
+  color: #009688;
+  text-align: center;
+  text-shadow: 2px 2px #E1BEE7;
+}
+
+.andra-header-small {
+  font-family: Geneva, sans-serif;
+  color: #004d40;
+  text-align: center;
+  text-shadow: .5px .5px #009688;
 }
 
 .andra-logo {
   font-family: "Verdana", Geneva, sans-serif;
-  color: purple;
+  color: #009688;
   font-size: 2.2em;
+  margin-left: 30px;
 }
 
 a.andra-logo:hover {
     text-decoration:none;
-    color: #c495ec;
+    color: white;
 }
 
 .nav-login {
@@ -73,9 +107,12 @@ a.nav-login:hover {
 }
 
 .standard-andra {
-  height: 340px;
+  height: 220px;
 }
 
+.standard-andra-large {
+  height: 340px;
+}
 #root-background {
   background-color: #c6a9e0;
 }
@@ -86,4 +123,93 @@ a.nav-login:hover {
 
 .hidden-camera {
   visibility: hidden;
+}
+
+.five-top {
+  margin-top: 35px;
+}
+
+.ten-top {
+  margin-top: 40px;
+}
+
+.twenty-top {
+  margin-top: 80px;
+}
+.thirty-top {
+  margin-top: 120px;
+}
+
+.ten-bottom {
+  margin-bottom: 40px;
+}
+
+.bubble
+{
+position: relative;
+width: 1000px;
+height: 120px;
+padding: 5px;
+background: #FFFFFF;
+-webkit-border-radius: 21px;
+-moz-border-radius: 21px;
+border-radius: 21px;
+}
+
+.bubble:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 19px 16px 0;
+border-color: #FFFFFF transparent;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -19px;
+left: 900px;
+}
+
+.center-text {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 120px;       /* the same as your div height */
+}
+
+.bubble-side
+{
+position: relative;
+width: 650px;
+height: 155px;
+padding: 5px;
+background: #FFFFFF;
+-webkit-border-radius: 21px;
+-moz-border-radius: 21px;
+border-radius: 21px;
+}
+
+.bubble-side:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 16px 0 16px 19px;
+border-color: transparent #FFFFFF;
+display: block;
+width: 0;
+z-index: 1;
+right: -19px;
+top: 105px;
+}
+
+.icon-experiment {
+  color: #004d40;
+}
+
+.andra-line {
+  border-color: #009688;
+}
+
+.up-ten{
+  margin-top: -20px;
 }
