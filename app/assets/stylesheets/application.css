@@ -179,7 +179,7 @@ left: 900px;
 .bubble-side
 {
 position: relative;
-width: 650px;
+width: 750px;
 height: 155px;
 padding: 5px;
 background: #FFFFFF;
@@ -202,6 +202,59 @@ right: -19px;
 top: 105px;
 }
 
+.bubble-side-wide
+{
+position: relative;
+width: 800px;
+height: 200px;
+padding: 5px;
+background: #FFFFFF;
+-webkit-border-radius: 21px;
+-moz-border-radius: 21px;
+border-radius: 21px;
+}
+
+.bubble-side-wide:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 16px 0 16px 19px;
+border-color: transparent #FFFFFF;
+display: block;
+width: 0;
+z-index: 1;
+right: -19px;
+top: 105px;
+}
+
+
+.bubble-large
+{
+position: relative;
+width: 750px;
+height: 300px;
+padding: 5px;
+background: #FFFFFF;
+-webkit-border-radius: 21px;
+-moz-border-radius: 21px;
+border-radius: 21px;
+}
+
+.bubble-large:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 19px 16px 0;
+border-color: #FFFFFF transparent;
+display: block;
+width: 0;
+z-index: 1;
+bottom: -19px;
+left: 636px;
+}
+
 .icon-experiment {
   color: #004d40;
 }
@@ -212,4 +265,8 @@ top: 105px;
 
 .up-ten{
   margin-top: -20px;
+}
+
+.log-image {
+  height: 70px;
 }
