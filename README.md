@@ -11,7 +11,7 @@ application up and running.
 
 Things you may want to cover:
 
-* Technologies: ruby 2.3.0, Rails 5.0.1, Morris.js, JQuery, rspec, 
+* Technologies: ruby 2.3.0, Rails 5.0.1, Morris.js, JQuery, rspec, postgresql
 
 * ...
 ![Andra website](/rmimg/image1.png?raw=true "Optional Title")
