@@ -23,9 +23,9 @@ Things you may want to cover:
 
 * ...
 
+![Andra website](/rmimg/image1.png?raw=true "Optional Title")
 ![Andra website](/rmimg/image2.png?raw=true "Optional Title")
 ![Andra website](/rmimg/image4.png?raw=true "Optional Title")
 ![Andra website](/rmimg/image5.png?raw=true "Optional Title")
 ![Andra website](/rmimg/image6.png?raw=true "Optional Title")
-![Andra website](/rmimg/image1.png?raw=true "Optional Title")
 ![Andra website](/rmimg/image3.png?raw=true "Optional Title")
