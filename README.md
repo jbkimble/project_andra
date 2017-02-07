@@ -23,9 +23,9 @@ Things you may want to cover:
 
 * ...
 
-![Andra website](/readmeimg/rmimg2.png?raw=true "Optional Title")
-![Andra website](/readmeimg/rmimg4.png?raw=true "Optional Title")
-![Andra website](/readmeimg/rmimg5.png?raw=true "Optional Title")
-![Andra website](/readmeimg/rmimg6.png?raw=true "Optional Title")
-![Andra website](/readmeimg/rmimg1.png?raw=true "Optional Title")
-![Andra website](/readmeimg/rmimg3.png?raw=true "Optional Title")
+![Andra website](/rmimg/iamge2.png?raw=true "Optional Title")
+![Andra website](/rmimg/iamge4.png?raw=true "Optional Title")
+![Andra website](/rmimg/iamge5.png?raw=true "Optional Title")
+![Andra website](/rmimg/iamge6.png?raw=true "Optional Title")
+![Andra website](/rmimg/iamge1.png?raw=true "Optional Title")
+![Andra website](/rmimg/iamge3.png?raw=true "Optional Title")
